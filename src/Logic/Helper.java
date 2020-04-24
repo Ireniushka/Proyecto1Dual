@@ -5,7 +5,7 @@ import java.util.Scanner;
 import Model.Coche;
 
 public class Helper {	
-	Coche c1;
+	Coche c;
 	
 	public void introducirCoche() {
 		Scanner sc=new Scanner(System.in);
@@ -19,7 +19,7 @@ public class Helper {
 		int km=Integer.parseInt(atributos[3]);
 		int coste=Integer.parseInt(atributos[4]);
 		
-		c1 = new Coche(atributos[0],atributos[1],atributos[2],km,coste);
+		c = new Coche(atributos[0],atributos[1],atributos[2],km,coste);
 		sc.close();
 	}
 	
@@ -31,7 +31,7 @@ public class Helper {
 	
 	
 	public String estadoCoche() {
-		if (c1.getEstado()=="Nuevo") return "Es un coche nuevo";
+		if (c.getEstado()=="Nuevo") return "Es un coche nuevo";
 			else return "Es un coche de segunda mano";
 	}
 	public void totalCompra() {
