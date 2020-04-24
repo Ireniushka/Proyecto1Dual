@@ -1,16 +1,18 @@
 package Model;
 
 public class Coche {
-	private String marca, modelo, matricula,  estado;
+	private String marca, modelo, matricula,  estado, color;
 	private int km, coste;
+	private boolean vaca, remolque;
 	
 	
 	public Coche(){};
 	
-	public Coche(String marca, String modelo, String matricula, int km, int coste){
+	public Coche(String marca, String modelo, String matricula, String color, int km, int coste){
 		this.marca=marca;
 		this.modelo=modelo;
 		this.matricula=matricula;
+		this.color=color;
 		this.km=km;
 		this.coste=coste;
 		
@@ -66,5 +68,32 @@ public class Coche {
 		this.coste = coste;
 	};
 	
-		
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public boolean isVaca() {
+		return vaca;
+	}
+
+	public void setVaca(boolean vaca) {
+		this.vaca = vaca;
+	}
+
+	public boolean isRemolque() {
+		return remolque;
+	}
+
+	public void setRemolque(boolean remolque) {
+		this.remolque = remolque;
+	}
+
+	public void masCosto(int cantidad){
+		coste=+cantidad;
+	}
+
 }
