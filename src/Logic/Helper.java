@@ -74,8 +74,8 @@ public class Helper {
 		c.masCosto(120);
 	}
 	
-	public String estadoCoche() {
-		if (c.getEstado()=="Nuevo") return "Es un coche nuevo";
+	public String estadoCoche(Coche c1) {
+		if (c1.getEstado().equals("Nuevo")) return "Es un coche nuevo";
 			else return "Es un coche de segunda mano";
 	}
 
@@ -85,7 +85,7 @@ public class Helper {
 	}
 
 	public String Factura() {
-		return estadoCoche()+" con coste inicial de "+coste+" euros \nAhora"+tiene(c.isRemolque())+" vaca colocada y "
+		return estadoCoche(c)+" con coste inicial de "+coste+" euros \nAhora"+tiene(c.isRemolque())+" vaca colocada y "
 		+tiene(c.isRemolque())+" remolque.\n Tras las mejoras el coste final del coche es: "+c.getCoste()+" euros.";
 	}
 

@@ -2,7 +2,8 @@ package Controller;
 
 import java.util.Scanner;
 
-import Logic.Helper;
+import Model.Coche;
+import Operaciones.Helper;
 
 public class Compra {
 	public static void main(String[] args) {
