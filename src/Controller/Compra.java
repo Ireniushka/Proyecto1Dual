@@ -11,11 +11,11 @@ public class Compra {
 		
 		h.introducirCoche();
 
-		System.out.println("Â¿Desea realizarle alguna mejora al coche? Escriba true o false ");
+		System.out.println("¿Desea realizarle alguna mejora al coche? Escriba true o false ");
 		boolean mejora=sc.nextBoolean();
 		while(mejora){
 			h.mejora();
-			System.out.println("Â¿Desea realizarle alguna otra mejora al coche? Escriba true o false ");
+			System.out.println("¿Desea realizarle alguna otra mejora al coche? Escriba true o false ");
 			mejora=sc.nextBoolean();
 		}
 		
