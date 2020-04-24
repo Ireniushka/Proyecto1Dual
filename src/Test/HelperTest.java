@@ -5,23 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
  
 import Model.Coche;
-import Operaciones.Helper;
+import Logic.Helper;
 
 class HelperTest {
 	Helper h= new Helper();
+	Coche c =new Coche("Ford","Fiesta","1111AAA", "azul", 0, 22000);
+	
 	
 	@Test
 	void testEstadoCoche() {
-		Coche c =new Coche("Ford","Fiesta","1111AAA", "azul", 0, 22000);
-		
-		h.estadoCoche(c);
-		assertEquals("Es un coche nuevo", c.getEstado());
+		assertEquals("Es un coche nuevo", h.estadoCoche(c));
 	}
 
-	/*@Test
+	@Test
 	void testTiene() {
-	
-		
-	}*/
+		assertEquals("sin ", h.tiene(c.isRemolque()));
+	}
 
 }
